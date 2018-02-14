@@ -19,7 +19,7 @@ class ResponsiveDrawer extends Component {
             open: open || responsiveDrawer.open,
             onRequestChange: toggleDrawerOpen,
             ...props
-        }
+        };
 
         return (
 
@@ -28,6 +28,7 @@ class ResponsiveDrawer extends Component {
             </Drawer>
 
         );
+
     }
 
 }
@@ -37,7 +38,7 @@ ResponsiveDrawer.propTypes = {
     responsiveDrawer: PropTypes.object.isRequired,
     browser: PropTypes.object.isRequired,
     breakPoint: PropTypes.string
-}
+};
 
 const mapStateToProps = (state) => {
 
@@ -48,7 +49,7 @@ const mapStateToProps = (state) => {
         responsiveDrawer
     }
 
-}
+};
 
 const mapDispatchToProps = (dispatch) => {
 
@@ -56,12 +57,12 @@ const mapDispatchToProps = (dispatch) => {
 
         toggleDrawerOpen: () => {
 
-            dispatch(toggleDrawerOpen())
+            dispatch(toggleDrawerOpen());
 
         }
 
     }
 
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(ResponsiveDrawer);

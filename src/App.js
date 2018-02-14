@@ -16,11 +16,15 @@ import { ConnectedRouter } from 'connected-react-router';
 import routes from './router';
 import { withRouter } from 'react-router-dom';
 
+import { Link } from 'react-router-dom';
+
+
 const styles = {
+
   drawer_container: {
     backgroundColor: "Lavender",
     minHeight: '100%',
-    maxHeight: '140%'
+    maxHeight: '1000%'
   },
 
   drawer_header: {
@@ -42,11 +46,12 @@ const styles = {
     paddingTop: 15
   }
 
-}
+};
 
 class App extends Component {
 
   render() {
+
     const {
       toggleDrawerOpen,
       browser,
@@ -68,7 +73,6 @@ class App extends Component {
               <div style={styles.drawer_header_container}>
 
                 <h1 style={styles.drawer_header}>Drawer</h1>
-
                 <ListItem />
 
               </div>
@@ -79,16 +83,17 @@ class App extends Component {
 
           <BodyContainer openSecondary={false}>
 
-            <ResponsiveAppBar
-              title={'Responsive Material-UI Drawer'}
-            />
+            <Link to="/">
 
+              <ResponsiveAppBar
+                title={'Responsive Material-UI Drawer'}
+              />
+            </Link>
             <h1>test</h1>
 
             <div style={{ margin: '10px' }}>
 
               <h1 style={styles.body_header}>Body</h1>
-
               {routes}
 
             </div>
@@ -103,8 +108,7 @@ class App extends Component {
 
   }
 
-}
-
+};
 
 App.propTypes = {
   toggleDrawerOpen: PropTypes.func.isRequired,
@@ -119,9 +123,9 @@ const mapStateToProps = (state) => {
   return {
     browser,
     responsiveDrawer
-  }
+  };
 
-}
+};
 
 const mapDispatchToProps = (dispatch) => {
 
@@ -134,14 +138,13 @@ const mapDispatchToProps = (dispatch) => {
     toggleDrawerDock: () => {
       dispatch(toggleDrawerDock())
     },
-    
+
     setResponsive: (isResponsive) => {
       dispatch(setResponsive(isResponsive))
-
     }
 
   }
 
-}
+};
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

@@ -7,8 +7,8 @@ import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'react-redux';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import configureStore from './store/configureStore';
-import { ConnectedRouter } from 'connected-react-router'
-import { loadChapters } from './actions/chapterActions'
+import { ConnectedRouter } from 'connected-react-router';
+import { loadChapters } from './actions/chapterActions';
 
 const history = createBrowserHistory();
 const store = configureStore(history);

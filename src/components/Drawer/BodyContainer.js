@@ -6,15 +6,7 @@ import isResponsiveAndOverBreakPoint from '../common/selectors';
 class BodyContainer extends Component {
 
     render() {
-
-        const {
-            browser,
-            responsiveDrawer,
-            breakPoint,
-            children,
-            width,
-            openSecondary,
-            style } = this.props;
+        const { browser, responsiveDrawer, breakPoint, children, width, openSecondary, style } = this.props;
 
         const setWidth = isResponsiveAndOverBreakPoint(browser, responsiveDrawer, breakPoint);
         const drawerWidth = width !== undefined ? width : 256;
@@ -39,7 +31,7 @@ class BodyContainer extends Component {
                 ...style
             }
 
-        }
+        };
 
         return (
 
@@ -60,7 +52,7 @@ BodyContainer.propTypes = {
     breakPoint: PropTypes.string,
     width: PropTypes.number,
     openSecondary: PropTypes.bool
-}
+};
 
 const mapStateToProps = (state) => {
 

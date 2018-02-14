@@ -3,7 +3,9 @@ import initialState from './initialState';
 
 
 const responsiveDrawer = (state = initialState, action) => {
+
     switch (action.type) {
+
         case types.RESPONSIVE_DRAWER_TOGGLE_DRAWER_OPEN:
             return {
                 ...state,
@@ -28,8 +30,10 @@ const responsiveDrawer = (state = initialState, action) => {
                 responsive: action.responsive
             }
 
-        default: return state
+        default: return state;
+
     }
+    
 }
 
 export default responsiveDrawer;

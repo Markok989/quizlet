@@ -24,7 +24,6 @@ class ResponsiveAppBar extends Component {
         } = this.props;
 
         const props = { ...(this.props) };
-
         const setWidth = isResponsiveAndOverBreakPoint(browser, responsiveDrawer, breakPoint);
         const drawerWidth = width !== undefined ? width : 256;
         const drawerOnRight = openSecondary !== undefined ? openSecondary : false;
@@ -102,8 +101,7 @@ const mapDispatchToProps = (dispatch) => {
     return {
         toggleDrawerOpen: () => {
 
-            dispatch(toggleDrawerOpen())
-
+            dispatch(toggleDrawerOpen());
         }
 
     }

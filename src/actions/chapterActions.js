@@ -3,7 +3,7 @@ import chaptersApi from '../api/mockChaptersApi'
 import { beginAjaxCall, ajaxCallError } from './ajaxStatusActions';
 
 
-// akcija za ucitavanje chaptera
+// action for loading chapters
 export function loadChaptersSuccess(chapters) {
 
     return {
@@ -12,7 +12,7 @@ export function loadChaptersSuccess(chapters) {
 
 }
 
-// akcija za kreiranje chaptera
+// action for creating chapters
 export function createChapterSuccess(chapter) {
 
     return {
@@ -21,7 +21,17 @@ export function createChapterSuccess(chapter) {
 
 }
 
-// akcija za azuriranje chaptra
+// action for removing chapters
+export function removeChapterSuccess(chapter) {
+
+    return {
+        type: types.REMOVE_CHAPTER_SUCCESS, chapter
+    };
+
+}
+
+
+// action for updateing chpater
 export function updateChapterSuccess(chapter) {
 
     return {
@@ -30,6 +40,9 @@ export function updateChapterSuccess(chapter) {
 
 }
 
+/*
+- function for loading chapters
+*/
 export function loadChapters() {
 
     return function (dispatch) {
@@ -41,7 +54,7 @@ export function loadChapters() {
         }).catch(error => {
 
             throw (error);
-
+            
         });
 
     };
