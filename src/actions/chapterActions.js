@@ -1,6 +1,6 @@
 import * as types from './actionTypes';
 import chaptersApi from '../api/mockChaptersApi'
-import { beginAjaxCall, ajaxCallError } from './ajaxStatusActions';
+// import { beginAjaxCall, ajaxCallError } from './ajaxStatusActions';
 
 
 // action for loading chapters
@@ -54,7 +54,7 @@ export function loadChapters() {
         }).catch(error => {
 
             throw (error);
-            
+
         });
 
     };

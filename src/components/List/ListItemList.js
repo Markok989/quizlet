@@ -1,11 +1,9 @@
-import React, { Component, PropTypes } from 'react';
-import { List, ListItem } from 'material-ui/List';
-import ActionGrade from 'material-ui/svg-icons/action/grade';
-import ActionDelete from 'material-ui/svg-icons/action/delete';
+import React from 'react';
+import { ListItem } from 'material-ui/List';
 import ContentAddBox from 'material-ui/svg-icons/content/add-box';
-import ContentInbox from 'material-ui/svg-icons/content/inbox';
-import Toggle from 'material-ui/Toggle';
-import { Link } from 'react-router-dom';
+// import ContentInbox from 'material-ui/svg-icons/content/inbox';
+// import Toggle from 'material-ui/Toggle';
+// import { Link } from 'react-router-dom';
 
 import ListItemRow from './ListItemRow';
 
@@ -26,7 +24,6 @@ class ListItemList extends React.Component {
             numLessons: 1,
             lessons: [],
             chapterId: '',
-            id: '',
             lesson: ''
         };
 
@@ -38,7 +35,7 @@ class ListItemList extends React.Component {
 
     render() {
 
-        const { chapters, removeQuestion, addChapter } = this.props;
+        const { chapters } = this.props;
 
         return (
 
@@ -78,7 +75,7 @@ class ListItemList extends React.Component {
 
         const chapters = this.state.chapters.filter(
 
-            chapter => chapter.id != id);
+            chapter => chapter.id !== id);
 
         this.setState({ chapters });
 

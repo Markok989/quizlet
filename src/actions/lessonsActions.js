@@ -1,6 +1,6 @@
 import * as types from './actionTypes';
-import mockChaptersApi from '../api/mockChaptersApi';
-import { beginAjaxCall, ajaxCallError } from './ajaxStatusActions';
+// import mockChaptersApi from '../api/mockChaptersApi';
+// import { beginAjaxCall, ajaxCallError } from './ajaxStatusActions';
 
 export function loadLessonsSucces(lessons) {
 

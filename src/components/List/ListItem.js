@@ -1,13 +1,11 @@
 import React from 'react';
 //import MobileTearSheet from '../../../MobileTearSheet';
-import { List, ListItem } from 'material-ui/List';
-import ActionGrade from 'material-ui/svg-icons/action/grade';
-import ContentInbox from 'material-ui/svg-icons/content/inbox';
+import { List } from 'material-ui/List';
 import Subheader from 'material-ui/Subheader';
 import ListItemList from './ListItemList';
 
 import { connect } from 'react-redux';
-import * as chapterActions from '../../actions/chapterActions';
+// import * as chapterActions from '../../actions/chapterActions';
 
 class ListNested extends React.Component {
 

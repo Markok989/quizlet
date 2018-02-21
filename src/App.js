@@ -8,14 +8,10 @@ import {
   toggleDrawerDock,
   setResponsive
 } from './components/Drawer/index';
-import RaisedButton from 'material-ui/RaisedButton'
-import Toggle from 'material-ui/Toggle'
 import { connect } from 'react-redux'
 import ListItem from './components/List/ListItem';
-import { ConnectedRouter } from 'connected-react-router';
 import routes from './router';
 import { withRouter } from 'react-router-dom';
-
 import { Link } from 'react-router-dom';
 
 
@@ -52,13 +48,13 @@ class App extends Component {
 
   render() {
 
-    const {
-      toggleDrawerOpen,
-      browser,
-      responsiveDrawer,
-      toggleDrawerDock,
-      setResponsive
-    } = this.props;
+    // const {
+    //   toggleDrawerOpen,
+    //   browser,
+    //   responsiveDrawer,
+    //   toggleDrawerDock,
+    //   setResponsive
+    // } = this.props;
 
     return (
 

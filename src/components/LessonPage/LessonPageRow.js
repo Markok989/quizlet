@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+// import { Link } from 'react-router';
 
 const LessonPageRow = ({ lesson }) => {
 
@@ -10,7 +10,7 @@ const LessonPageRow = ({ lesson }) => {
         </div>
 
     );
-    
+
 };
 
 export default LessonPageRow;

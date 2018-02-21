@@ -1,15 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 //import MobileTearSheet from '../../../MobileTearSheet';
-import { List, ListItem } from 'material-ui/List';
-import ActionGrade from 'material-ui/svg-icons/action/grade';
+import { ListItem } from 'material-ui/List';
 import ActionDelete from 'material-ui/svg-icons/action/delete';
 import ContentAddBox from 'material-ui/svg-icons/content/add-box';
-import ContentInbox from 'material-ui/svg-icons/content/inbox';
 import { Link } from 'react-router-dom';
 import * as lessonsActions from '../../actions/lessonsActions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { PropTypes } from 'prop-types';
 
 
 
@@ -47,7 +44,7 @@ class ListItemRow extends React.Component {
 
     render() {
 
-        const { chapter, removeLesson, removeChapter, addLesson, id } = this.props;
+        const { chapter } = this.props;
 
         return (
 
@@ -118,7 +115,7 @@ class ListItemRow extends React.Component {
 
             const lessons = this.state.lessons.filter(
 
-                (lesson) => lesson.id != id
+                (lesson) => lesson.id !== id
 
             );
 

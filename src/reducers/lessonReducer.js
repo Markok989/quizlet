@@ -7,8 +7,7 @@ export default function loadLessonReducer(state = initialState.lessons, action) 
     switch (action.type) {
 
         case types.LOAD_LESSON_SUCCESS:
-            return
-            action.lessons;
+            return [action.lessons];
 
         case types.CREATE_LESSON_SUCCESS: return [
             ...state, Object.assign({}, action.lesson)
