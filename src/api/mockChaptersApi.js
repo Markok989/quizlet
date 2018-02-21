@@ -11,29 +11,29 @@ const chapters = [
 
             {
                 // 2
-                "id": "go2o9zllu",
                 "chapterId": "uosfpm4cn",
+                "id": "go2o9zllu",
                 "label": "Lesson 1",
                 "content": "Lekcija 1"
             },
 
             {
-                "id": "5fok3c5qu",
                 "chapterId": "uosfpm4cn",
+                "id": "5fok3c5qu",
                 "label": "Lesson 2",
                 "content": "Lekcija 2"
             },
 
             {
-                "id": "xgipqeuom",
                 "chapterId": "uosfpm4cn",
+                "id": "xgipqeuom",
                 "label": "Lesson 3",
                 "content": "Lekcija 3"
             },
 
             {
-                "id": "xgtpqeuom",
                 "chapterId": "uosfpm4cn",
+                "id": "xgtpqeuom",
                 "label": "Lesson 4",
                 "content": "Lekcija 4"
             }
@@ -48,29 +48,29 @@ const chapters = [
         "lessons": [
 
             {
-                "id": "go2o9zl2u",
                 "chapterId": "uosfpm3cn",
+                "id": "go2o9zl3u",
                 "label": "Lesson 5",
                 "content": "Lekcija 5"
             },
 
             {
                 "chapterId": "uosfpm3cn",
-                "id": "5fok3c6qu",
+                "id": "5fok3c6q3",
                 "label": "Lesson 6",
                 "content": "Lekcija 6"
             },
 
             {
-                "id": "xgipqouom",
                 "chapterId": "uosfpm3cn",
+                "id": "xgipqouop",
                 "label": "Lesson 7",
                 "content": "Lekcija 7"
             },
 
             {
-                "id": "xgtpqpuom",
                 "chapterId": "uosfpm3cn",
+                "id": "xgtpqpuok",
                 "label": "Lesson 8",
                 "content": "Lekcija 8"
             }
@@ -85,15 +85,15 @@ const chapters = [
         "lessons": [
 
             {
-                "id": "go2o9zl2u",
                 "chapterId": "uosfpm6cn",
+                "id": "go2o9zl4u",
                 "label": "Lesson 9",
                 "content": "Lekcija 9"
             },
 
             {
                 "chapterId": "uosfpm6cn",
-                "id": "_5fok3c6qu",
+                "id": "5fok3c6qt",
                 "label": "Lesson 10",
                 "content": "Lekcija 10"
             },
@@ -107,7 +107,7 @@ const chapters = [
 
             {
                 "chapterId": "uosfpm6cn",
-                "id": "_xgtpqpuom",
+                "id": "xgtpqpuoh",
                 "label": "Lesson 12",
                 "content": "Lekcija 12"
             }
@@ -122,8 +122,8 @@ const chapters = [
         "lessons": [
 
             {
-                "id": "go2o9zl2u",
                 "chapterId": "uosfpm8cn",
+                "id": "go2o9zl2u",
                 "label": "Lesson 13",
                 "content": "Lekcija 13"
             },
@@ -136,15 +136,15 @@ const chapters = [
             },
 
             {
-                "id": "xgipqouom",
                 "chapterId": "uosfpm8cn",
+                "id": "xgipqouou",
                 "label": "Lesson 15",
                 "content": "Lekcija 15"
             },
 
             {
-                "id": "xgtpqpuom",
                 "chapterId": "uosfpm8cn",
+                "id": "xgtpqpuom",
                 "label": "Lesson 16",
                 "content": "Lekcija 16"
             }
