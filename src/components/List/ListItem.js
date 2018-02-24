@@ -21,13 +21,6 @@ class ListNested extends React.Component {
 
     };
 
-    handleNestedListToggle = (item) => {
-
-        this.setState({
-            open: item.state.open,
-        });
-
-    };
 
     render() {
 
@@ -42,8 +35,15 @@ class ListNested extends React.Component {
                 <div>
 
                     <List>
+
                         <Subheader>Nested List Items</Subheader>
-                        <ListItemList chapters={chapters} />
+
+                        <ListItemList
+                            chapters={chapters}
+                            id={chapters.id}
+                            lesson={chapters.lessons}
+                        />
+
                     </List>
 
                 </div>
@@ -60,6 +60,7 @@ class ListNested extends React.Component {
 
 function mapStateToProps(state, ownProps) {
 
+    // console.log("ROOT: ", JSON.stringify(state))
     return {
         chapters: state.chapters
     };

@@ -28,7 +28,7 @@ export function updateLessonsSuccess(lesson) {
 };
 
 export function removeLessonsSuccess(lesson) {
-
+    // console.log("Evo me u akciji " + JSON.stringify(lesson));
     return {
         type: types.REMOVE_LESSON_SUCCESS, lesson
     };

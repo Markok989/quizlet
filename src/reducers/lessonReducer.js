@@ -1,8 +1,12 @@
+/* 
 import * as types from '../actions/actionTypes';
 import initialState from './initialState';
 
 
-export default function loadLessonReducer(state = initialState.lessons, action) {
+export default function loadLessonReducer(state = initialState.chapters.lessons, action) {
+
+    console.log('LESSON REDUCER action: ', action)
+    console.log('LESSON REDUCER state: ', state)
 
     switch (action.type) {
 
@@ -34,3 +38,4 @@ export default function loadLessonReducer(state = initialState.lessons, action) 
 
 }
 
+ */

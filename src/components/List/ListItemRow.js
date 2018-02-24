@@ -16,7 +16,7 @@ class ListItemRow extends React.Component {
         super(props, context);
 
         this.state = {
-            chapterId: '',
+            chapter: '',
             id: '',
             lesson: ''
         };
@@ -26,10 +26,10 @@ class ListItemRow extends React.Component {
 
     componentDidUpdate() {
 
-        this.props.actions.updateLessonSuccess({
-            chapterId: this.state.chapterId,
-            id: this.state.id,
-            label: this.state.lesson
+        console.log('KOMPONENTA DID: ');
+
+        this.props.actions.updateLessonsSuccess({
+            id: this.props.id
         });
 
     };
@@ -45,6 +45,8 @@ class ListItemRow extends React.Component {
     render() {
 
         const { chapter } = this.props;
+        console.log('CHAPTER: ', chapter);
+        console.log('CHAPTER: ', JSON.stringify( chapter));
 
         return (
 
@@ -67,11 +69,10 @@ class ListItemRow extends React.Component {
                                         <ListItem
                                             key={lesson.id}
                                             primaryText={lesson.label}
-                                            value={this.state.lesson}
                                             onChange={this.handleChange}
                                             rightIcon={
                                                 < ActionDelete
-                                                    onClick={this.removeLesson}
+                                                    onClick={() => { this.removeLesson(lesson.id, chapter.id) }}
                                                 />
                                             }
                                         />
@@ -88,13 +89,7 @@ class ListItemRow extends React.Component {
 
                 />
 
-                <ListItem
-                    rightIcon={
-                        <ContentAddBox
-                            onClick={() => { }}
-                        />
-                    }
-                >
+                <ListItem rightIcon={<ContentAddBox onClick={() => { }} />}>
 
                     <input
                         placeholder="Add lesson"
@@ -109,52 +104,44 @@ class ListItemRow extends React.Component {
     }
 
 
-    removeLesson = (id) => {
+    removeLesson = (id, chapterID) => {
 
-        if (this.state.lessons.length > 0) {
+        // console.log('ID ZA CHAPTER: ', chapterID);
 
-            const lessons = this.state.lessons.filter(
+        this.props.actions.removeLessonsSuccess({
+            id: id,
+            chapterID: chapterID
+        })
 
-                (lesson) => lesson.id !== id
+        // this.props.actions.updateLessonsSuccess({
+        //     id: this.props.id
+        // })
 
-            );
+    };
 
-            this.setState({ lessons });
-            console.log(lessons, "lekcije druga")
-
+    /* 
+        addLesson = () => {
+    
+            const ID = this.id();
+    
+            const lessons = [
+                ...this.state.lessons,
+                { id: ID }
+            ];
+    
+            this.setState({
+                lessons
+            });
+    
         }
-
-    };
-
-
-    addLesson = () => {
-
-        const ID = this.id();
-
-        const lessons = [
-            ...this.state.lessons,
-            { id: ID }
-        ];
-
-        this.setState({
-            lessons
-        });
-
-    }
-
-    id = () => {
-        return '_' + Math.random().toString(36).substr(2, 9);
-    }
+    
+        id = () => {
+            return '_' + Math.random().toString(36).substr(2, 9);
+        }
+     */
 
 };
 
-function mapStateToProps(state, ownProps) {
-
-    return {
-        lessons: state.lessons
-    };
-
-};
 
 function mapDispatchToProps(dispatch) {
 
@@ -165,4 +152,4 @@ function mapDispatchToProps(dispatch) {
 };
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(ListItemRow);
+export default connect(null, mapDispatchToProps)(ListItemRow);

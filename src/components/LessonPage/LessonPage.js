@@ -52,7 +52,7 @@ function mapStateToProps(state, ownProps) {
     const ids = id.split("-");
     const chapter = state.chapters.filter((ch) => ch.id === ids[0]);
     const lesson = chapter[0].lessons.filter((lesson) => lesson.id === ids[1]);
-    console.log("Lekcija provera" + lesson[0]);
+    // console.log("Lekcija provera" + lesson[0]);
 
     return {
         lesson: lesson[0]
